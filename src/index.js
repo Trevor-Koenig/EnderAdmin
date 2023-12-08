@@ -10,6 +10,11 @@ import theme from './theme';
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 
+// All pages in router
+import AboutPage from './AboutPage';
+import LoginPage from './LoginPage';
+
+
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('root');
@@ -20,6 +25,16 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "login",
+        element: <LoginPage />,
+      },
+    ],
   },
 ]);
 
