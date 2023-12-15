@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import "./index.css";
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
@@ -11,6 +12,7 @@ import Root from "./routes/root";
 import ErrorPage from "./error-page";
 
 // All pages in router
+import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import LoginPage from './LoginPage';
 
@@ -27,14 +29,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "about",
-        element: <AboutPage />,
-      },
-      {
-        path: "login",
-        element: <LoginPage />,
+        path: "home",
+        element: <HomePage />,
       },
     ],
+  },
+  {
+    path: "about",
+    element: <AboutPage />,
+  },
+  {
+    path: "login",
+    element: <LoginPage />,
   },
 ]);
 
