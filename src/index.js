@@ -18,6 +18,7 @@ import LoginPage from './LoginPage';
 
 
 import reportWebVitals from './reportWebVitals';
+import SignUpPage from './SignUpPage';
 
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
@@ -39,8 +40,12 @@ const router = createBrowserRouter([
     element: <AboutPage />,
   },
   {
-    path: "login",
+    path: "signin",
     element: <LoginPage />,
+  },
+  {
+    path: "register",
+    element: <SignUpPage />,
   },
 ]);
 
