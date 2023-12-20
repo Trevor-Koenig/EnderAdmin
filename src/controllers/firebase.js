@@ -1,8 +1,5 @@
-// Import the functions you need from the SDKs you need
-
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -28,38 +25,7 @@ const firebaseConfig = {
 
 
 // Initialize Firebase
+export const app = initializeApp(firebaseConfig);
 
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-
-function signUp(email, password) {
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed up 
-            const user = userCredential.user;
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-        });
-};
-
-function signIn(email, password) {
-    const auth = getAuth();
-    signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-        });
-}
-
-export { signIn, signUp };
+// Initialize Firebase Authentication and get a reference to the service
+export const auth = getAuth(app);
