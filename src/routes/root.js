@@ -45,6 +45,12 @@ export default function Root() {
             <Typography color="secondary">
                 Secondary colors!
             </Typography>
+            <Typography color="error">
+                Danger!
+            </Typography>
+            <Typography color="theme.palette.success">
+                Success!
+            </Typography>
             <Button variant="contained" onClick={() => navigateTo("register")}>Sign up</Button>
             <Button variant="contained" onClick={() => navigateTo("signin")}>Login</Button>
             <Link to="/register"><Button variant="outlined" onClick={() => navigateTo("signin")}>Login</Button></Link>
