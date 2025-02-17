@@ -1,17 +1,17 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import HomePage from './HomePage';
-import AboutPage from './AboutPage';
-import LoginPage from './LoginPage';
+import HomePage from './Home/';
+import AboutPage from './About/';
+import LoginPage from './Login/';
 
 
 function App() {
   return (
     <div>
       <Route path="/" exact component={HomePage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/login" component={LoginPage} />
+      <Route path="/About/" component={AboutPage} />
+      <Route path="/Login/LoginPage.js" component={LoginPage} />
       <div>
         <p>
           Hello?

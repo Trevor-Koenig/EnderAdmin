@@ -19,7 +19,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Typography from '@mui/material/Typography';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { CreateAccount } from './controllers/Authentication';
+import { CreateAccount } from '../../controllers/Authentication';
 
 
 function SignUpPage() {

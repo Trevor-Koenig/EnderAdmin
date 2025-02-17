@@ -9,16 +9,16 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import Root from "./routes/root";
-import ErrorPage from "./error-page";
+import ErrorPage from "./pages/Error/";
 
 // All pages in router
-import HomePage from './HomePage';
-import AboutPage from './AboutPage';
-import LoginPage from './LoginPage';
+import HomePage from './pages/Home/';
+import AboutPage from './pages/About/index';
+import LoginPage from './pages/Login/LoginPage';
 
 
 import reportWebVitals from './reportWebVitals';
-import SignUpPage from './SignUpPage';
+import SignUpPage from './pages/Login/SignUpPage.js';
 
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
